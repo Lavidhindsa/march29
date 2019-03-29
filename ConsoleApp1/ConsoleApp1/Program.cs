@@ -11,12 +11,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            {
+            Console.WriteLine("download");
+            Download();
+            Console.ReadLine():
+            
 
-            }
+            
         }
         static void Download()
         {
             Thread.Sleep(3000);
+            Console.WriteLine("download complete...");
         }
     }
+}
