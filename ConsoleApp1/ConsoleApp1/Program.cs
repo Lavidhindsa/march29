@@ -5,11 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
+
 {
     class Program
     {
         static void Main(string[] args)
         {
+            HelloWorld hw = new HelloWorld();
+            hw.Hello();
+        }
+    }
+    class HelloWorld
+    {
+        public void Hello()
+        {
+            Console.WriteLine("Hello World!");
         }
     }
 }
