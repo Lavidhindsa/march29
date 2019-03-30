@@ -20,6 +20,7 @@ namespace ConsoleApp1
         }
         static async void Download()
         {
+<<<<<<< HEAD
             await Network.download();
             Console.WriteLine("download complete");
         }
@@ -34,3 +35,10 @@ namespace ConsoleApp1
             }
         }
     } }
+=======
+            Thread.Sleep(66000);
+            Console.WriteLine("download complete...");
+        }
+    }
+}
+>>>>>>> 18ab89d3edbff724322ebfbd439e05f9c839c449
