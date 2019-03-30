@@ -20,7 +20,6 @@ namespace ConsoleApp1
         }
         static async void Download()
         {
-<<<<<<< HEAD
             await Network.download();
             Console.WriteLine("download complete");
         }
@@ -28,17 +27,15 @@ namespace ConsoleApp1
 
         class Network
         {
+
             static public Task download()
             {
+                HTTPClient client = new HTTPClient();
+                var data = await client.GetStringAsnyc("http://torontopubliclibrary.ca");
+                Console.WriteLine(data);
+                
                 return Task.Run(
                 () => ThreadStaticAttribute.Sleep(60000));
             }
         }
     } }
-=======
-            Thread.Sleep(66000);
-            Console.WriteLine("download complete...");
-        }
-    }
-}
->>>>>>> 18ab89d3edbff724322ebfbd439e05f9c839c449
