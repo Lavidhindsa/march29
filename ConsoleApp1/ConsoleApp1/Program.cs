@@ -20,7 +20,7 @@ namespace ConsoleApp1
         }
         static void Download()
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(66000);
             Console.WriteLine("download complete...");
         }
     }
