@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,13 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("download");
-            Download();
+            download();
             Console.ReadLine():
             
 
             
         }
-        static async void Download()
+        static async void download()
         {
             await Network.download();
             Console.WriteLine("download complete");
@@ -27,15 +28,16 @@ namespace ConsoleApp1
 
         class Network
         {
-
-            static public Task download()
+            static ArrayList WebPageContents = new ArrayList();
+            public static async Task download()
             {
-                HTTPClient client = new HTTPClient();
+                HttpClient client = new HttpClient();
                 var data = await client.GetStringAsnyc("http://torontopubliclibrary.ca");
-                Console.WriteLine(data);
-                
-                return Task.Run(
-                () => ThreadStaticAttribute.Sleep(60000));
+                //Console.WriteLine(data);
+                foreach (var i in data)
+                {
+                    WebPageContents.Add(i);
+                }
             }
         }
     } }
